@@ -9,7 +9,6 @@ default_args = {
     "owner": "etl_user",
     "depends_on_past": False,
     "start_date": datetime(2024, 2, 23),
-    #"retry_delay": timedelta(minutes=0.1)
 }
 
 dag = DAG('dag2', default_args=default_args, schedule_interval='0 * * * *', catchup=True,
