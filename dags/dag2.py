@@ -12,7 +12,7 @@ default_args = {
     #"retry_delay": timedelta(minutes=0.1)
 }
 
-dag = DAG('dag2', default_args=default_args, schedule_interval='0 5 * * *', catchup=True,
+dag = DAG('dag2', default_args=default_args, schedule_interval='0 * * * *', catchup=True,
           max_active_tasks=3, max_active_runs=1, tags=["Test", "My first dag"])
 
 task1 = BashOperator(
